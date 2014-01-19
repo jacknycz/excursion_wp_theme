@@ -173,3 +173,11 @@ function excursion_excerpt_more( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Read More &rarr;</a>';
 }
 add_filter( 'excerpt_more', 'excursion_excerpt_more' );
+
+/**
+ * Add editor styles.
+ */
+function excursion_add_editor_styles() {
+    add_editor_style( 'editor-style.css' );
+}
+add_action( 'init', 'excursion_add_editor_styles' );
